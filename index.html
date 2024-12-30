@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Късметче за теб</title>
+</head>
+<body>
+    <h1>Добре дошъл на страницата с късметчета!</h1>
+    <button onclick="generateFortune()">Вземи късметче</button>
+    <div id="fortune"></div>
+    <script>
+        const fortunes = [
+            "Днес ще ти се усмихне щастието!",
+            "Очаквай приятна изненада!",
+            "Твоят късмет ще озари целия ден!"
+        ];
+
+        function generateFortune() {
+            const randomIndex = Math.floor(Math.random() * fortunes.length);
+            document.getElementById('fortune').innerText = fortunes[randomIndex];
+        }
+    </script>
+</body>
+</html>
