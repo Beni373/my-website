@@ -37,13 +37,13 @@
         ];
          //Функция за генериране на късметчета
         function generateFortune() {
-             // Избирай случайно от 0 до 19  
+             // Избирай случайно от 0 до 21 
             const randomIndex = Math.floor(Math.random() * fortunes.length);
             // Ако е лошо късметче,покажи съобщението за "шега"
-             if (randomIndex >= 10)
+             if (randomIndex >= 11)
              {
 
-             document.getElementById("fortune").innerHTML = fortunes[10];  // Лошо късметче
+             document.getElementById("fortune").innerHTML = fortunes[11];  // Лошо късметче
                 // Покажи бутон за ново натискане
                 const button = document.querySelector("button");
                 button.innerHTML = "Натисни за истинския късмет!";
@@ -58,7 +58,7 @@
 
         // Функция за показване на истинския късмет
         function showTrueFortune() {
-            const randomIndex = Math.floor(Math.random() * 10);  // Избирай само от добрите късметчета
+            const randomIndex = Math.floor(Math.random() * 11);  // Избирай само от добрите късметчета
             document.getElementById("fortune").innerHTML = fortunes[randomIndex];
             document.querySelector("button").style.display = "none"; // Скриваме бутона след второто натискане      
         }
